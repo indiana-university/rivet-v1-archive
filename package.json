@@ -1,0 +1,76 @@
+{
+  "name": "rivet-uits",
+  "description": "Indiana University design system",
+  "homepage": "https://rivet.iu.edu",
+  "version": "1.8.3",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/indiana-university/rivet-source"
+  },
+  "bugs": {
+    "url": "https://github.com/indiana-university/rivet-source/issues",
+    "email": "rivet@iu.edu"
+  },
+  "scripts": {
+    "start": "gulp",
+    "headless": "gulp headless",
+    "build": "npm run clean && gulp release && gulp fractalBuild && zip -r rivet.zip css js sass index.html",
+    "github:package": "npm run clean && gulp release && zip -r rivet-gh-release.zip css js sass index.html",
+    "test": "start-server-and-test cypress:serve http://localhost:3000 cypress:test",
+    "cypress:serve": "gulp headless",
+    "cypress:test": "cypress run",
+    "clean": "rm -rf ./css ./js ./sass ./rivet.zip ./index.html",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "css/**/*",
+    "sass/**/*",
+    "js/**/*",
+    "index.html"
+  ],
+  "devDependencies": {
+    "@actions/core": "1.9.1",
+    "@actions/github": "^4.0.0",
+    "@frctl/fractal": "1.5.14",
+    "@frctl/mandelbrot": "1.10.2",
+    "@frctl/nunjucks": "^2.0.1",
+    "@octokit/rest": "^18.2.1",
+    "autoprefixer": "^7.1.2",
+    "browser-sync": "2.27.10",
+    "chai": "^4.1.2",
+    "cypress": "^3.4.1",
+    "eslint-config-rivet": "^1.0.0",
+    "fs": "0.0.1-security",
+    "gulp": "4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-eslint": "^4.0.0",
+    "gulp-header": "^1.8.9",
+    "gulp-mocha": "^6.0.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "5.1.0",
+    "gulp-stylelint": "^9.0.0",
+    "gulp-uglify": "^3.0.0",
+    "jsdom": "^11.3.0",
+    "jsdom-global": "^3.0.2",
+    "mocha": "^4.0.1",
+    "node-sass": "^7.0.1",
+    "pixelmatch": "^4.0.2",
+    "pngjs": "^3.3.1",
+    "polyserve": "^0.27.15",
+    "postcss": "^6.0.8",
+    "postcss-reporter": "^4.0.0",
+    "postcss-scss": "^1.0.2",
+    "pump": "^1.0.2",
+    "puppeteer": "^1.16.0",
+    "require-dir": "^0.3.2",
+    "stylelint": "^10.0.1",
+    "stylelint-config-rivet": "^1.0.0",
+    "stylelint-scss": "^3.6.1"
+  },
+  "dependencies": {
+    "start-server-and-test": "^1.12.0"
+  }
+}
