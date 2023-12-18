@@ -1,5 +1,7 @@
 # Rivet
 
+> ⚠️ This version of Rivet is no longer supported. For the current version of Rivet, see [github.com/indiana-university/rivet-source](https://github.com/indiana-university/rivet-source).
+
 [Rivet](https://rivet.iu.edu/) is Indiana University’s design system. A collection of code and visual assets used to create patterns across software titles, Rivet makes it easier to build and maintain consistent user interfaces.
 
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause) [![npm version](https://img.shields.io/npm/v/rivet-uits.svg?style=flat)](https://www.npmjs.com/package/rivet-uits) [![CircleCI](https://circleci.com/gh/indiana-university/rivet-source.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/indiana-university/rivet-source)
